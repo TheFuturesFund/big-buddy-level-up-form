@@ -1,0 +1,28 @@
+// Place all the styles related to the Forms controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.submitted-box {
+    box-styling: border-box;
+    text-align: center;
+    padding: 20px;
+    width: 50%;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    margin: 0 auto;
+    background-color: #CADB30;
+    color: #001049 ;
+    a{
+        color: #17A5B4;
+        
+        &:visited {
+            color: #17A5B4;
+        }
+    }
+}
+/*
+.form-section {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid gray;
+} */ 

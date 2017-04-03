@@ -1,0 +1,194 @@
+<%= form_for(@form) do |f| %>
+  <% if @form.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@form.errors.count, "error") %> prohibited this form from being saved:</h2>
+
+      <ul>
+      <% @form.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div>
+    <h2>Scholar's Information</h2>
+  </div>
+
+  <div class="field">
+    <%= f.label :first_name, "First Name" %><br>
+    <%= f.text_field :first_name %>
+  </div>
+  <div class="field">
+    <%= f.label :middle_name, "Middle Initial " %><br>
+    <%= f.text_field :middle_name %>
+  </div>
+  <div class="field">
+    <%= f.label :last_name, "Last Name"%><br>
+    <%= f.text_field :last_name %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  <div class="field">
+    <%= f.label :city %><br>
+    <%= f.text_field :city %>
+  </div>
+  <div class="field">
+    <%= f.label :state %><br>
+    <%= f.text_field :state %>
+  </div>
+  <div class="field">
+    <%= f.label :zipcode %><br>
+    <%= f.text_field :zipcode %>
+  </div>
+  <div class="field">
+    <%= f.label :cellphone_number, "Cellphone Number" %><br>
+    <%= f.telephone_field :cellphone_number %>
+  </div>
+  <div class="field">
+    <%= f.label :date_of_birth %><br>
+    <%= f.date_field :date_of_birth %>
+  </div>
+  <div class="field">
+    <%= f.label :social_security_number %><br>
+    <%= f.password_field :social_security_number %>
+  </div>
+  
+  <!-- Gender -->
+  <div class="field">
+    <%= f.label :gender %><br>
+    <%= f.label :gender, "Male", value:  "male" %>
+    <%= f.radio_button :gender, "male" %>
+    <%= f.label :gender, "Female", value:  "female" %>
+    <%= f.radio_button :gender, "female" %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :email_addresses %><br>
+    <%= f.email_field :email_addresses %>
+  </div>
+  <div class="field">
+    <%= f.label :school %><br>
+    <%= f.text_field :school %>
+  </div>
+  <div class="field">
+    <%= f.label :grade %><br>
+    <%= f.select :grade, Form.grades.keys.to_a %>
+  </div>
+  <div class="field">
+    <%= f.label :race %><br>
+    <%= f.select :race, Form.races.keys.to_a %>
+  </div>
+  <div class="field">
+    <%= f.label :indiviual_graduation_plan %><br>
+    <%= f.check_box :indiviual_graduation_plan %>
+  </div>
+  <div class="field">
+    <%= f.label :special_education_services %><br>
+    <%= f.check_box :special_education_services %>
+  </div>
+  <div class="field">
+    <%= f.label :free_lunch %><br>
+    <%= f.check_box :free_lunch %>
+  </div>
+  <div class="field">
+    <%= f.label :parent_in_prison %><br>
+    <%= f.check_box :parent_in_prison %>
+  </div>
+  <div class="field">
+    <%= f.label :ESL_services %><br>
+    <%= f.check_box :ESL_services %>
+  </div>
+  <div class="field">
+    <%= f.label :tshirt_size %><br>
+    <%= f.select :tshirt_size, Form.tshirt_sizes.keys.to_a %>
+  </div>
+  
+  <div class="form-section">
+    <h2>Medical Information</h2>
+    
+    <div class="field">
+      <%= f.label :doctor_name %><br>
+      <%= f.text_field :doctor_name %>
+    </div>
+    <div class="field">
+      <%= f.label :doctor_workphone %><br>
+      <%= f.telephone_field :doctor_workphone %>
+    </div>
+    <div class="field">
+      <%= f.label :medical_restrictions %><br>
+      <%= f.check_box :medical_restrictions %>
+    </div>
+    <div class="field">
+      <%= f.label :medical_restrictions_explained %><br>
+      <%= f.text_area :medical_restrictions_explained %>
+    </div>
+    <div class="field">
+      <%= f.label :medications %><br>
+      <%= f.check_box :medications %>
+    </div>
+    <div class="field">
+      <%= f.label :medications_explained %><br>
+      <%= f.text_area :medications_explained %>
+    </div>
+    <div class="field">
+      <%= f.label :allergies %><br>
+      <%= f.check_box :allergies %>
+    </div>
+    <div class="field">
+      <%= f.label :allergies_explained %><br>
+      <%= f.text_area :allergies_explained %>
+    </div>
+  </div>
+  
+  <div class="form-section">
+    <h2>Contact Information</h2>
+    <div class="field">
+      <%= f.label :guardian1_contact_name, "Guardian's Contact Name" %><br>
+      <%= f.text_field :guardian1_contact_name %>
+    </div>
+    <div class="field">
+      <%= f.label :guardian1_contact_employment, "Guardian's Employment" %><br>
+      <%= f.text_field :guardian1_contact_employment %>
+    </div>
+    <div class="field">
+      <%= f.label :guardian1_contact_workphone, "Guardian's Workphone Number" %><br>
+      <%= f.telephone_field :guardian1_contact_workphone %>
+    </div>
+    <div class="field">
+      <%= f.label :guardian1_contact_homephone, "Guardian's Contact Home Phone Number" %><br>
+      <%= f.telephone_field :guardian1_contact_homephone %>
+    </div>
+    <div class="field">
+      <%= f.label :guardian1_contact_cellphone, "Guardian's Cellphone Number" %><br>
+      <%= f.telephone_field :guardian1_contact_cellphone %>
+    </div>
+    <div class="field">
+      <%= f.label :guardian1_contact_email, "Guardian's Email" %><br>
+      <%= f.email_field :guardian1_contact_email %>
+    </div>
+    <div class="field">
+      <%= f.label :emergency_contact_name %><br>
+      <%= f.text_field :emergency_contact_name %>
+    </div>
+    <div class="field">
+      <%= f.label :emergency_contact_relationship %><br>
+      <%= f.text_field :emergency_contact_relationship %>
+    </div>
+    <div class="field">
+      <%= f.label :emergency_contact_workphone %><br>
+      <%= f.telephone_field :emergency_contact_workphone %>
+    </div>
+    <div class="field">
+      <%= f.label :emergency_contact_cellphone %><br>
+      <%= f.telephone_field :emergency_contact_cellphone %>
+    </div>
+  </div>
+
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
