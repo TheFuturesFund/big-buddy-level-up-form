@@ -5,7 +5,7 @@ class FormsController < ApplicationController
   # GET /forms
   # GET /forms.json
   def index
-    @forms = Form.all
+    @forms = Form.order(created_at: :asc)
   end
 
   # GET /forms/1
@@ -73,6 +73,65 @@ class FormsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def form_params
-      params.require(:form).permit(:first_name, :middle_name, :last_name, :address, :city, :state, :zipcode, :cellphone_number, :date_of_birth, :social_security_number, :gender, :email_addresses, :school, :grade, :race, :indiviual_graduation_plan, :special_education_services, :free_lunch, :parent_in_prison, :ESL_services, :tshirt_size, :doctor_name, :doctor_workphone, :medical_restrictions, :medical_restrictions_explained, :medications, :medications_explained, :allergies, :allergies_explained, :guardian1_contact_name, :guardian1_contact_employment, :guardian1_contact_workphone, :guardian1_contact_homephone, :guardian1_contact_cellphone, :guardian1_contact_email, :guardian2_contact_name, :guardian2_contact_employment, :guardian_contact_workphone, :guardian2_contact_homephone, :guardian2_contact_cellphone, :guardian2_contact_email, :emergency_contact_name, :emergency_contact_relationship, :emergency_contact_workphone, :emergency_contact_cellphone)
+      params.require(:form).permit(
+        :first_name,
+        :middle_name,
+        :last_name,
+        :address,
+        :city,
+        :state,
+        :zipcode,
+        :cellphone_number,
+        :date_of_birth,
+        :social_security_number,
+        :gender,
+        :email_addresses,
+        :school,
+        :grade,
+        :race,
+        :indiviual_graduation_plan, 
+        :special_education_services, 
+        :free_lunch, 
+        :parent_in_prison, 
+        :ESL_services, 
+        :tshirt_size, 
+        :doctor_name, 
+        :doctor_workphone, 
+        :medical_restrictions,
+        :medical_restrictions_explained,
+        :medications,
+        :medications_explained,
+        :allergies,
+        :allergies_explained,
+        :guardian1_contact_name,
+        :guardian1_contact_employment,
+        :guardian1_contact_workphone,
+        :guardian1_contact_homephone,
+        :guardian1_contact_cellphone, 
+        :guardian1_contact_email, 
+        :guardian2_contact_name, 
+        :guardian2_contact_employment, 
+        :guardian_contact_workphone, 
+        :guardian2_contact_homephone,
+        :guardian2_contact_cellphone,
+        :guardian2_contact_email,
+        :emergency_contact_name,
+        :emergency_contact_relationship, 
+        :emergency_contact_workphone,
+        :emergency_contact_cellphone,
+        :household_adults,
+        :household_children,
+        :household_mom,
+        :household_dad,
+        :household_stepmom,
+        :household_stepdad,
+        :household_grandparents,
+        :household_foster_parent,
+        :household_other,
+        :household_income,
+        :essay_question,
+        :healthy_la_qualifcation,
+        :healthy_la_provider,
+      )
     end
 end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170401150256) do
+ActiveRecord::Schema.define(version: 20170422153309) do
 
   create_table "admins", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -47,11 +47,11 @@ ActiveRecord::Schema.define(version: 20170401150256) do
     t.string   "school"
     t.integer  "grade"
     t.integer  "race"
-    t.boolean  "indiviual_graduation_plan"
-    t.boolean  "special_education_services"
-    t.boolean  "free_lunch"
-    t.boolean  "parent_in_prison"
-    t.boolean  "ESL_services"
+    t.boolean  "indiviual_graduation_plan",      default: false
+    t.boolean  "special_education_services",     default: false
+    t.boolean  "free_lunch",                     default: false
+    t.boolean  "parent_in_prison",               default: false
+    t.boolean  "ESL_services",                   default: false
     t.integer  "tshirt_size"
     t.string   "doctor_name"
     t.string   "doctor_workphone"
@@ -77,8 +77,21 @@ ActiveRecord::Schema.define(version: 20170401150256) do
     t.string   "emergency_contact_relationship"
     t.string   "emergency_contact_workphone"
     t.string   "emergency_contact_cellphone"
-    t.datetime "created_at",                     null: false
-    t.datetime "updated_at",                     null: false
+    t.datetime "created_at",                                     null: false
+    t.datetime "updated_at",                                     null: false
+    t.integer  "household_adults"
+    t.integer  "household_children"
+    t.boolean  "household_mom",                  default: false
+    t.boolean  "household_dad",                  default: false
+    t.boolean  "household_stepmom",              default: false
+    t.boolean  "household_stepdad",              default: false
+    t.boolean  "household_grandparents",         default: false
+    t.boolean  "household_foster_parent",        default: false
+    t.string   "household_other"
+    t.integer  "household_income"
+    t.string   "essay_question"
+    t.boolean  "healthy_la_qualifcation",        default: false
+    t.integer  "healthy_la_provider"
   end
 
 end

@@ -3,6 +3,11 @@
 <p>Press Ctrl+P to Print</p>
 
 <p>
+  <strong>Submitted On</strong>
+  <%= @form.created_at.strftime "%b %e, %Y @ %l:%M %p" %>
+</p>
+
+<p>
   <strong>First name:</strong>
   <%= @form.first_name %>
 </p>
@@ -108,6 +113,64 @@
 </p>
 
 <p>
+  <strong> Healthy la eligibility</strong>
+  <%= @form.healthy_la_qualifcation %>
+</p>
+
+<p>
+  <strong>Healthy la provider</strong>
+  <%= @form.healthy_la_provider %>
+</p>
+
+<p>
+  <strong>Household adults:</strong>
+  <%= @form.household_adults %>
+</p>
+
+<p>
+  <strong>Household children:</strong>
+  <%= @form.household_children %>
+</p>
+
+<p>
+  <strong>Household mom:</strong>
+  <%= @form.household_mom %>
+</p>
+
+<p>
+  <strong>Household dad:</strong>
+  <%= @form.household_dad %>
+</p>
+
+<p>
+  <strong>Household stepmom:</strong>
+  <%= @form.household_stepmom %>
+</p>
+
+<p>
+  <strong>Household stepdad:</strong>
+  <%= @form.household_stepdad %>
+</p
+
+><p>
+  <strong>Household grandparents:</strong>
+  <%= @form.household_grandparents %>
+</p><p>
+  <strong>Household foster parent:</strong>
+  <%= @form.household_foster_parent %>
+</p>
+
+<p>
+  <strong>Household other:</strong>
+  <%= @form.household_other %>
+</p>
+
+<p>
+  <strong>Household income:</strong>
+  <%= @form.household_income %>
+</p>
+
+<p>
   <strong>Doctor name:</strong>
   <%= @form.doctor_name %>
 </p>
@@ -195,6 +258,11 @@
 <p>
   <strong>Emergency contact cellphone:</strong>
   <%= @form.emergency_contact_cellphone %>
+</p>
+
+<p>
+  <strong>Essay question:</strong>
+  <%= @form.essay_question %>
 </p>
 
 <%= link_to 'Edit', edit_form_path(@form) %> |

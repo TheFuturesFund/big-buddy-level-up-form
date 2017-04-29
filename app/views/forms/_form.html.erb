@@ -48,15 +48,14 @@
     <%= f.telephone_field :cellphone_number %>
   </div>
   <div class="field">
-    <%= f.label :date_of_birth %><br>
+    <%= f.label :date_of_birth, "Date of Birth" %><br>
     <%= f.date_field :date_of_birth %>
   </div>
   <div class="field">
-    <%= f.label :social_security_number %><br>
+    <%= f.label :social_security_number, "Social Security Number" %><br>
     <%= f.password_field :social_security_number %>
   </div>
   
-  <!-- Gender -->
   <div class="field">
     <%= f.label :gender %><br>
     <%= f.label :gender, "Male", value:  "male" %>
@@ -66,7 +65,7 @@
   </div>
   
   <div class="field">
-    <%= f.label :email_addresses %><br>
+    <%= f.label :email_addresses, "Email Address" %><br>
     <%= f.email_field :email_addresses %>
   </div>
   <div class="field">
@@ -104,6 +103,72 @@
   <div class="field">
     <%= f.label :tshirt_size %><br>
     <%= f.select :tshirt_size, Form.tshirt_sizes.keys.to_a %>
+  </div>
+  
+  <div class="feild">
+    <%= f.label :healthy_la_qualifcation %><br>
+    <%= f.check_box :healthy_la_qualifcation %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :healthy_la_provider %><br>
+    <%= f.select :healthy_la_provider, Form.healthy_la_providers.keys.to_a, include_blank: true%>
+  </div>
+  
+  
+  <div class="form-section">
+    <h2>Household Information</h2>
+    
+    <div class="field">
+      <%= f.label :household_adults, "Number of adults in household"%><br>
+      <%= f.number_field :household_adults %>
+      </div>
+    
+    <div class="field">
+      <%= f.label :household_children, "Number of children in household"%><br>
+      <%= f.number_field :household_children %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :household_mom %><br>
+      <%= f.check_box :household_mom %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :household_dad %> <br>
+      <%= f.check_box :household_dad %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :household_stepmom %><br>
+      <%= f.check_box :household_stepmom %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :household_stepdad %><br>
+      <%= f.check_box :household_stepdad %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :household_grandparents %><br>
+      <%= f.check_box :household_grandparents %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :household_foster_parent %><br>
+      <%= f.check_box :household_foster_parent %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :household_other %><br>
+      <%= f.text_field :household_other %>
+    </div>
+    
+    <div class="field">
+      <%= f.label :household_income %><br>
+      <%= f.select :household_income, Form.household_incomes.keys.to_a, include_blank: true %>
+    </div>
+
   </div>
   
   <div class="form-section">
@@ -158,7 +223,7 @@
       <%= f.telephone_field :guardian1_contact_workphone %>
     </div>
     <div class="field">
-      <%= f.label :guardian1_contact_homephone, "Guardian's Contact Home Phone Number" %><br>
+      <%= f.label :guardian1_contact_homephone, "Guardian's Contact Homephone Number" %><br>
       <%= f.telephone_field :guardian1_contact_homephone %>
     </div>
     <div class="field">
@@ -170,23 +235,38 @@
       <%= f.email_field :guardian1_contact_email %>
     </div>
     <div class="field">
-      <%= f.label :emergency_contact_name %><br>
+      <%= f.label :emergency_contact_name, "Emergency Contact's Name" %><br>
       <%= f.text_field :emergency_contact_name %>
     </div>
     <div class="field">
-      <%= f.label :emergency_contact_relationship %><br>
+      <%= f.label :emergency_contact_relationship, "Emergency Contact's Relationship" %><br>
       <%= f.text_field :emergency_contact_relationship %>
     </div>
     <div class="field">
-      <%= f.label :emergency_contact_workphone %><br>
+      <%= f.label :emergency_contact_workphone, "Emergency Contact's Workphone" %><br>
       <%= f.telephone_field :emergency_contact_workphone %>
     </div>
     <div class="field">
-      <%= f.label :emergency_contact_cellphone %><br>
+      <%= f.label :emergency_contact_cellphone, "Emergency Contact's Cellphone" %><br>
       <%= f.telephone_field :emergency_contact_cellphone %>
     </div>
   </div>
 
+<div class="form-section">
+  <h2>Essay</h2>
+  <p>
+    Choose one of the writing prompts below and respond to the best of your ability.
+    <ol>
+      <li>When you look in the mirror, what do you see? Describe what you see, how you feel about your own reflection, and what it prompts you to do.</li>
+      <li>Write about the most valuable lesson you ever learned. What made it so useful for you?</li>
+      <li>Who is a person you admire? How would they describe you?</li>
+    </ol>
+    <div class="field">
+      <%= f.text_area :essay_question %>
+    </div>
+  </p>
+  
+</div>
 
   <div class="actions">
     <%= f.submit %>

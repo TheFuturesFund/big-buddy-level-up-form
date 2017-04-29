@@ -1,9 +1,10 @@
 body {
-  background-color: #fff;
-  color: #333;
+  background-color: #e6e6e6;
+  color: #000000;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
+  text-align: left;
 }
 
 p, ol, ul, td {
@@ -32,9 +33,11 @@ a {
 }
 
 div {
-  &.field, &.actions {
-    margin-bottom: 10px;
-  }
+  // &.field, &.actions {
+  //   width: 50%;
+  //   margin: 0 auto;
+  //   margin-bottom: 15px;
+  // }
 }
 
 #notice {
@@ -60,7 +63,7 @@ div {
     font-weight: bold;
     padding: 5px 5px 5px 15px;
     font-size: 12px;
-    margin: -7px;
+    margin: 0 auto;
     margin-bottom: 0px;
     background-color: #c00;
     color: #fff;

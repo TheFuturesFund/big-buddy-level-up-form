@@ -20,9 +20,32 @@
         }
     }
 }
-/*
-.form-section {
-    padding: 20px;
-    margin: 20px;
-    border: 1px solid gray;
-} */ 
+.field input[type=text]
+{
+    width: 100%;
+}
+.field input[type=tel]
+{
+    width: 100%;
+}
+.field input[type=email]
+{
+  width: 100%;
+}
+.field input[type=password]
+{
+    width: 100%;
+}
+.field textarea {
+    height: 5em;
+    resize: vertical;
+    width: 100%;
+}
+
+// /*
+// .form-section {
+//     padding: 20px;
+//     margin: 20px;
+//     border: 1px solid gray;
+    // } */ 
+ 
